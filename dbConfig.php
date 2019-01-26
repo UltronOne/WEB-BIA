@@ -2,7 +2,7 @@
 $dbHost = 'den1.mysql6.gear.host';
 $dbUsername = 'biadata';
 $dbPassword = '123#123';
-$dbName = 'test';
+$dbName = 'biadata';
 
 
 $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
