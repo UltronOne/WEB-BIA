@@ -1,7 +1,7 @@
 <?php
 $dbHost = 'den1.mysql6.gear.host';
 $dbUsername = 'biadata';
-$dbPassword = '	Ng7u_bm0GOB_';
+$dbPassword = '123#123';
 $dbName = 'test';
 
 
