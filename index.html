@@ -4,144 +4,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Slabo+27px" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+      <!--Import Google Icon Font-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <title>Berufsinformationsabend</title>
-  <style>
-    header{
-      background: url(img/a.jpg);
-      background-size: cover;
-      background-position: center;
-      min-height: 1000px;
-    }
-    @media screen and (max-width: 670px){
-      header{
-        min-height: 500px;
-      }
-    }
-    .section{
-      padding-top: 4vw;
-      padding-bottom: 4vw;
-    }
-    .tabs .indicator{
-      background-color: #1a237e;
-    }
-    .tabs .tab a:focus, .tabs .tab a:focus.active{
-      background: transparent;
-    }
-  </style>
+    <link rel="stylesheet" href="main_index.css" />
+    
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 
 </head>
+    
 <body>
 
-  <!-- navbar -->
+  <!-- Navigationsbar -->
+    
   <header>
     <nav class="nav-wrapper transparent">
       <div class="container">
-        <a href="#" class="brand-logo">Berufsinformationsabend</a>
+        <a href="#" class="brand-logo" style="">Berufsinformationsabend</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-          <i class="material-icons">menu</i>
+          <i class="material-icons">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="test.php">Berufe</a></li>
+          <li><a href="#photos">Berufe</a></li>
           <li><a href="#contact">Login</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" id="mobile-menu">
-          <li><a href="#">Photo's</a></li>
-          <li><a href="#">Services</a></li>
-         
+          <li><a href="#">Berufe</a></li>
+          <li><a href="#">Login</a></li>
         </ul>
       </div>
     </nav>
+      
+       <div class="text"style=" font-size:200%;text-align: center;">
+					<h1>Berufsinformationsabend 2019</h1>
+           <hr style="width: 1200px">
+					<p>Datum hier einfügen</p>
+        </div>
+      
+      <!-- Pfeil -->
+      
+      <button class="btn"><a href="#box"class='far fa-arrow-alt-circle-down' style='font-size:48px;color:white ;margin-top: 300px; margin-left: 900px;';></a></button>
+
   </header>
 
-  <!-- photo / grid -->
-  <section class="container section scrollspy" id="photos">
-    <div class="row">
-      <div class="col s12 l4">
-          <img src="img/doc.jpg" alt="" class="responsive-img materialboxed">
-      </div>
-      <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Artzt</h2>
-        <p> Streber werden Artzt....</p>
-      </div>
+<section id="intro" class="middle">
+    				        <div class="box">
+
+						<span class="icon fa-info"></span>
+						<h2 style="font-size: 200%">Was ist der Berufsinformationsabend?</h2>
+                         <p2 style="color:#444444">Wie oben erwähnt, führt eine genauere, wissenschaftliche Betrachtung zu komplexeren Definitions- und Beschreibungsversuchen. Die Eigenschaft des „Text-Seins“ bezeichnet man als Textualität, die sprachwissenschaftliche Untersuchung von Texten ist die Textlinguistik. Diese Disziplin stellt verschiedene Textualitätskriterien zur Verfügung.
+                            </p2>  
+
     </div>
-    <div class="row">
-      <div class="col s12 l4 offset-l1 push-l7">
-          <img src="img/trash.jpg" alt="" class="responsive-img materialboxed">
-      </div>
-      <div class="col s12 l6 offset-l1 pull-l5 right-align">
-        <h2 class="indigo-text text-darken-4">Müllmann</h2>
-        <p>Ranu und Jonathans Zukunft...</p>
-      </div>
+    <div class="button">
+						<ul class="actions">
+							<li ><a href="#" class="button" style="font-size: 160%">Login</a></li>
+						</ul>
     </div>
-    <div class="row">
-      <div class="col s12 l4">
-          <img src="img/mech.jpg" alt="" class="responsive-img materialboxed">
-      </div>
-      <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Mechaniker</h2>
-        <p>Mechaniker halt</p>
-      </div>
-    </div>
-    
-  </section>
-
- 
-
-  
-
-  <!-- parallax -->
-  <div class="parallax-container">
-    <div class="parallax">
-      <img src="img/stars.jpg" alt="" class="responsive-img">
-    </div>
-  </div>
-
-  <!-- contact form -->
-  <section class="section container scrollspy" id="contact">
-    <div class="row">
-      <div class="col s12 l5">
-        <h2 class="indigo-text text-darken-4">Anmeldung</h2>
-        <p>Hier kannst du dich für Berufe für die du dich Interessierst eintragen</p>
-      </div>
-      <div class="col s12 l5 offset-l2">
-        <form>
-          <div class="input-field">
-            <i class="material-icons prefix">person</i>
-            <input type="email" id="name">
-            <label for="email">Dein Name</label>
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">lock</i>
-            <textarea id="message" class="materialize-textarea" cols="20" rows="20"></textarea>
-            <label for="message">Passwort</label>
-          </div>
-          
-          
-          <div class="input-field center">
-            <button class="btn">Login</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
- <!-- parallax -->
- <div class="parallax-container">
-  <div class="parallax">
-    <img src="img/stars.jpg" alt="" class="responsive-img">
-  </div>
-</div>
-
- 
+    </section>
+        
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
+      
     $(document).ready(function(){
       $('.sidenav').sidenav();
       $('.materialboxed').materialbox();
@@ -154,6 +93,7 @@
       $('.tooltipped').tooltip();
       $('.scrollspy').scrollSpy();
     });
+      
   </script>
 </body>
 </html>
