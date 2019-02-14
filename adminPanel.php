@@ -151,7 +151,7 @@ if(!empty($_GET['status'])){
     <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
     <div class="file-field input-field">
       <div class="btn">
-        <span>File</span>
+        <span>Datei</span>
         <input type="file" name="file">
       </div>
       <div class="file-path-wrapper">
