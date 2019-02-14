@@ -16,15 +16,15 @@ if(!empty($_GET['status'])){
     switch($_GET['status']){
         case 'succ':
             $statusMsgClass = 'alert-success';
-            $statusMsg = 'Members data has been inserted successfully.';
+            $statusMsg = 'Alle Benutzer wurden erfolgreich hinzugefügt.';
             break;
         case 'err':
             $statusMsgClass = 'alert-danger';
-            $statusMsg = 'Some problem occurred, please try again.';
+            $statusMsg = 'Ein Problem ist aufgetreten bitte erneut versuchen!';
             break;
         case 'invalid_file':
             $statusMsgClass = 'alert-danger';
-            $statusMsg = 'Please upload a valid CSV file.';
+            $statusMsg = 'Bitte eine CSV Datei hochladen!';
             break;
         default:
             $statusMsgClass = '';
