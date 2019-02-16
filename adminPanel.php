@@ -8,8 +8,13 @@ session_start();
 include 'dbConfig.php';
 
 
+
 if(!isset($_SESSION['username'])) {
-  header('Location: adminLogin.php');  
+  
+  header('Location: login.php');  
+}
+if($_SESSION['username']!="admin"){
+  header('Location: logout.php');  
 }
 
 if(!empty($_GET['status'])){
@@ -79,7 +84,13 @@ if(!empty($_GET['status'])){
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Admin Panel</a>
+
+    <?php 
+      
+      echo '<a href="#" class="brand-logo">'.$_SESSION['username'].'</a>';
+   ?>
+
+     <a href="#" class="brand-logo"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="logout.php">Logout</a></li>
       </ul>
@@ -105,14 +116,14 @@ if(!empty($_GET['status'])){
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input id="input_text" type="text" name="textHead" data-length="10">
+                  <input id="input_text" type="text" name="textHead" data-length="25">
                   <label for="input_text">Überschrift</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung" data-length="120"></textarea>
-                  <label for="textarea2">Beschreibung</label>
+                <textarea id="textarea2" class="materialize-textarea" data-length="500"></textarea>
+            <label for="textarea2">Beschreibung</label>
                 </div>
               </div>
               <input type="submit" class="btn btn-primary" name="importBeruf" value="Hinzufügen">
@@ -123,9 +134,9 @@ if(!empty($_GET['status'])){
   </form>
     </div>
 
+    
 
-
-
+    
 <?php if(!empty($statusMsg)){
       
         echo ' <div class="card-panel teal lighten-2">'.$statusMsg.'</div>';
@@ -237,6 +248,9 @@ if(!empty($_GET['status'])){
       });
       $('.tooltipped').tooltip();
       $('.scrollspy').scrollSpy();
+      $(document).ready(function() {
+    $('input#input_text, textarea#textarea2').characterCounter();
+  });
     });
   </script>
 

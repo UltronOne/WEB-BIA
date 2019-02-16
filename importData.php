@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include 'dbConfig.php';
 
@@ -38,33 +39,34 @@ if(isset($_POST['importSubmit'])){
     }else{
         $qstring = '?status=invalid_file';
     }
+    header("Location: adminPanel.php".$qstring);
 }
+
 
 
 if(isset($_POST['importBeruf'])){
     
-    
-  
-    
-
-   
-               
                 $txtHead = $_POST["textHead"];
                 $txtBeschreibung = $_POST["textBeschreibung"];
-            
                 $db->query("INSERT INTO berufe (head, besch) VALUES ('$txtHead','$txtBeschreibung')");
                 
-            
-
-            
-
-            
-           
-
-         
+                header("Location: adminPanel.php".$qstring);
     
 }
 
+if(isset($_POST['saveBeruf'])){
+   
+        $name = $_SESSION['username'];
+        $wunsch1 = $_POST['wunsch1'];
+        $wunsch2 = $_POST['wunsch2'];
+        
+       
+   
+    
+        $db->query(" UPDATE benutzer SET w1 = '$wunsch1' , w2 = '$wunsch2' WHERE user = '$name'");
+                
+        header("Location: userPanel.php");
+
+}
 
 
-header("Location: adminPanel.php".$qstring);

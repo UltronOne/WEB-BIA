@@ -10,6 +10,7 @@ if (isset($_POST['username']) and isset($_POST['password'])){
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+//user wird überprüft
 if($username=="admin"){
   $query = "SELECT * FROM `admin` WHERE user='$username' and pass='$password'";
   $result = mysqli_query($db, $query) or die(mysqli_error($db));
