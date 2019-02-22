@@ -53,6 +53,24 @@ if(isset($_POST['importBeruf'])){
                 header("Location: adminPanel.php".$qstring);
     
 }
+if(isset($_POST['berufeLöschen'])){
+    
+    
+    $db->query("TRUNCATE table berufe");
+    
+    header("Location: adminPanel.php".$qstring);
+
+}
+if(isset($_POST['nutzerLöschen'])){
+    
+    
+    $db->query("TRUNCATE table benutzer");
+    
+    header("Location: adminPanel.php".$qstring);
+
+}
+
+
 
 if(isset($_POST['saveBeruf'])){
    

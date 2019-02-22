@@ -132,10 +132,11 @@ if(!empty($_GET['status'])){
         </div>
         
   </form>
+  
     </div>
 
-    
-
+   
+    <button class="btn waves-effect waves-light" type="submit" name="berufeLöschen">Alle Berufe löschen</i></button>
     
 <?php if(!empty($statusMsg)){
       
@@ -200,7 +201,7 @@ if(!empty($_GET['status'])){
                       <td><?php echo $row['w2']; ?></td>
                     </tr>
                     <?php } }else{ ?>
-                    <tr><td colspan="5">No member(s) found.....</td></tr>
+                    <tr><td colspan="5">Keine Beunutzer gefunden......</td></tr>
                     <?php } ?>
               </tbody>
             </table>
@@ -208,13 +209,15 @@ if(!empty($_GET['status'])){
         </div>
       </div>
     </div>
+    <button class="btn waves-effect waves-light" type="submit" name="nutzerLöschen">Alle Nutzer löschen</i>
+  </button>
   </div>
 
 
+                    
+  
 
-
-
- 
+                    
       
   
 
