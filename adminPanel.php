@@ -122,7 +122,7 @@ if(!empty($_GET['status'])){
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea" data-length="500"></textarea>
+                <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung" data-length="500"></textarea>
             <label for="textarea2">Beschreibung</label>
                 </div>
               </div>

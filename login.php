@@ -176,12 +176,10 @@ if($_SESSION['username']=="admin"){
           <i class="material-icons" style="color: #444444">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#berufe" style="color: #444444">Berufe</a></li>
-          <li><a href="#login" style="color: #444444">Login</a></li>
+          <li><a href="berufe.php" style="color: #444444">Berufe</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
-          <li><a href="#" >Berufe</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="berufe.php" >Berufe</a></li>
         </ul>
       </div>
     </nav>
