@@ -89,7 +89,7 @@ if(!empty($_GET['status'])){
           <i class="material-icons" style="color: #444444">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#berufe" style="color: #444444">Berufe</a></li>
+          <li><a href="berufe.php" style="color: #444444">Berufe</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
           <li><a href="#">Berufe</a></li>
