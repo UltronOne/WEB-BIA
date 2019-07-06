@@ -160,7 +160,14 @@ if($_SESSION['username']=="admin"){
 			color: #999999;
 		}
 
-      
+      /* Anpassungen 480px */
+
+@media screen and (max-width: 480px) {
+	#navbarheader{
+		font-size: 95%;
+	}
+	
+}
       
   </style>
 </head>
@@ -171,17 +178,17 @@ if($_SESSION['username']=="admin"){
   <header>
     <nav class="nav-wrapper transparent" >
       <div class="container" >
-        <a href="#" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
+        <a href="#" class="brand-logo" style="color: #444444" id="navbarheader">Berufsinformationsabend</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons" style="color: #444444">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#berufe" style="color: #444444">Berufe</a></li>
-          <li><a href="#login" style="color: #444444">Login</a></li>
+          <li><a href="#berufe" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
+          <li><a href="#login" style="color: #444444"><i class="material-icons left">vpn_key</i>Login</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
-          <li><a href="#" >Berufe</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#" ><i class="material-icons left">person</i>Berufe</a></li>
+          <li><a href="#"><i class="material-icons left">vpn_key</i>Login</a></li>
         </ul>
       </div>
     </nav>
@@ -218,7 +225,7 @@ if($_SESSION['username']=="admin"){
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Passwort</label>
               </div>
-              <label style='float: right;'>
+              <label style='float: center;'>
 								<a class='pink-text' ><b>Passwort wurde per Email verschickt</b></a>
 							</label>
             </div>
@@ -226,7 +233,7 @@ if($_SESSION['username']=="admin"){
             <center>
               <div class='row'>
                   <div class="col s12">
-                <button type='submit' name='btn_login' class='button' ">Login</button>
+                <a type='submit' name='btn_login' class="waves-effect waves-light btn" style="background-color: transparent;color: black;  border-radius: 20px;   width: 100%;"><i class="material-icons left">vpn_key</i>Login</a>
                   </div>
               </div>
             </center>

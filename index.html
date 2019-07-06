@@ -33,27 +33,27 @@
   <header>
     <nav class="nav-wrapper transparent">
       <div class="container">
-        <a href="#" class="brand-logo" style="">Berufsinformationsabend</a>
+        <a href="#" class="brand-logo" id="navbarheader">Berufsinformationsabend</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#photos">Berufe</a></li>
-          <li><a href="#contact">Login</a></li>
+          <li><a href="#photos"><i class="material-icons left">person</i>Berufe</a></li>
+          <li><a href="#contact"><i class="material-icons left">vpn_key</i>Login</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" id="mobile-menu">
-          <li><a href="#">Berufe</a></li>
-          <li><a href="#">Login</a></li>
+          <li><a href="#"><i class="material-icons left">person</i>Berufe</a></li>
+          <li><a href="#"><i class="material-icons left">vpn_key</i>Login</a></li>
         </ul>
       </div>
     </nav>
       
        <div class="text"style=" font-size:200%;text-align: center;">
-					<h1>Berufsinformationsabend 2019</h1>
+          <h1 id="berufsheader">Berufsinformationsabend 2019</h1>
            <hr style="width: 1200px">
-					<p>Datum hier einfügen</p>
+					<p class="flow-text">Datum hier einfügen</p>
            
-<i class="fa fa-arrow-circle-down" style="color: white;font-size: 50px;margin-top: 250px"></i>
+<a class="fa fa-arrow-circle-down" style="color: white;font-size: 50px;margin-bottom: 100px" id="arrowscroll" href="#info"></a>
            
            
         </div>
@@ -63,51 +63,35 @@
       <button class=""><a href="#box"class='far fa-arrow-alt-circle-down' style='font-size:48px;color:black;text-align: center; ';></a></button>-->
 
   </header>
-
     <div class="row">
 <div class="col s12">
     				        
 <div class="center-align" style="font-size:400%;margin-top:50">
 						&#9432;
                                 </div>
-						<h2 style="font-size: 200%;font-size:290%">Was ist der Berufsinformationsabend?</h2>
-                               <div class="dick" style="margin-left:100px;margin-right:100px;">
-                         <p2 >Wie oben erwähnt, führt eine genauere, wissenschaftliche Betrachtung zu komplexeren Definitions- und Beschreibungsversuchen. Die Eigenschaft des „Text-Seins“ bezeichnet man als Textualität, die sprachwissenschaftliche Untersuchung von Texten ist die Textlinguistik. Diese Disziplin stellt verschiedene Textualitätskriterien zur Verfügung.
-                            </p2>
-    </div>
-        
-    </div>
-    </div>
-   
-    <div class="row">
-        
-        <div class="col s6">
-            
-    <div class="button" style="align:left">
-						<ul class="actions">
-							<li ><a href="login.php"style="font-size: 160%;color: black">Login</a></li>
-                            
-						</ul>
-    </div>
-            
-        </div>
-        
-        <div class="col s6">
-            
-    <div class="button"style="align:left">
-                                         
-						<ul class="actions">
-							
-                            <li ><a href="berufe.php"style="font-size: 160%;color: black">Berufe</a></li>
-						</ul>
-                                                                                
-    </div>
-                                                                                
-    </div>                                                                    
-    </div>                                                                    
-        
 
-  <!-- Compiled and minified JavaScript -->
+						<h2 id="infoheadline"><u>Was ist der Berufsinformationsabend?</u></h2>
+                              
+                         <p class="flow-text" style="color: black; letter-spacing: 0.2em;text-align: center">Wie oben erwähnt, führt eine genauere, wissenschaftliche Betrachtung zu komplexeren Definitions- und Beschreibungsversuchen. Die Eigenschaft des „Text-Seins“ bezeichnet man als Textualität, die sprachwissenschaftliche Untersuchung von Texten ist die Textlinguistik. Diese Disziplin stellt verschiedene Textualitätskriterien zur Verfügung.
+                            
+    </div>
+        
+    </div>
+    </div>
+    <section class="container section scrollspy" id="info">
+      <div class="row">
+      <div class="col s6">
+      <a class="waves-effect waves-light btn" style="background-color: white;color: black;border-radius: 20px;width: 100%;"><i class="material-icons left">vpn_key</i>Login</a>
+            </div>
+      <div class="col s6">
+                                         
+      <a class="waves-effect waves-light btn" style="background-color: white;color: black;border-radius: 20px;width: 100%;"><i class="material-icons left">person</i>Listen</a>
+                                                                                
+      </div>                                                      
+      </div>
+  </section>
+
+  <!-- Compiled and msinified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
@@ -124,7 +108,9 @@
       $('.tooltipped').tooltip();
       $('.scrollspy').scrollSpy();
     });
-      
+
+    
+
   </script>
 </body>
 </html>
