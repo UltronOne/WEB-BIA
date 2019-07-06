@@ -1,5 +1,5 @@
  h1{
-          margin-top: 300px;
+          margin-top: 200px;
           font-size: 2em;
           font-weight: 400;
 		  line-height: 1.5;
@@ -7,7 +7,7 @@
 		  letter-spacing: 0.375rem;
 	}
  h2{
-        margin-top: 200px;
+        margin-top: 50px;
         text-align: center;
 		font-weight: 400;
 		line-height: 1.5;
@@ -44,38 +44,15 @@ p2{
     letter-spacing: 0.0875rem;
     }
 
-.button{
-        width: 100%;
-        text-align: center;
-		display: inline-block;
-		line-height: 3.5em;
-		text-transform: uppercase;
-		letter-spacing: 0.325em;
-		font-size: 0.725em;
-        
-}
-	.button {
-		box-shadow: 0 0 0 2px #666666;
-        padding: 0 2em 0 2.375em;
-        
-        
-		color: #444444 !important;
-	}
+	.flow-text{
+		text-transform: none;
 
-		.button:hover {
-			color: #EF6480 !important;
-			box-shadow: inset 0 0 0 2px #EF6480;
 		}
 
-		.button.icon:before {
-			color: #999999;
-		}
 
-#button
-{
-    display: block;
+#infoheadline{
+	font-size: 200%;
 }
-
 
 
 
@@ -85,11 +62,27 @@ p2{
       background: url(img/banner.jpg);
       background-size: cover;
       background-position: center;
-      min-height: 1000px;
+	  min-height: 1000px;}
+	  
+@media screen and (max-width: 670px){
+		header{
+		  min-height: 500px;
+		}
+		#berufsheader{
+			font-size: 85%;
+		}
+  }
 
- @media screen and (max-width: 670px){
-      header{
-        min-height: 500px;
-      }
-    }
-        
+/* Anpassungen 480px */
+
+@media screen and (max-width: 480px) {
+	#navbarheader{
+		font-size: 95%;
+	}
+	#berufsheader{
+		font-size: 70%;
+	}
+	#infoheadline{
+		font-size: 70%;
+	}
+}
