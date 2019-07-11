@@ -44,7 +44,7 @@ if (isset($_SESSION['username'])){
   $username = $_SESSION['username'];
 
 if($_SESSION['username']=="admin"){
-  header('Location: adminPanel.php');
+  header('Location: panel.php');
 }else{
   header('Location: userPanel.php');
 

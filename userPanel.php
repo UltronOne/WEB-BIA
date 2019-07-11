@@ -107,13 +107,12 @@ if(!empty($_GET['status'])){
 
 
 
+    <p style="color: #444444;font-size: 150%;text-align:center">Schiene 1 : 19:00-20:00</p>
     <div class="row">
+
+
+
       <div class="center-align">
-
-
-<p style="color: #444444;font-size: 150%;text-align:center">Schiene 1 : 19:00-20:00</p>
-        
-          
         <div class="input-field col s7 push-s3">
 
 
@@ -137,19 +136,17 @@ if(!empty($_GET['status'])){
               
               <?php } ?>
             </select>
-            <label>Veranstaltung 1</label>
-          </div>
-        </div>
-      </div>
-
-
            
+
+
+
+            <label>Veranstaltung 1</label>
       
     <div class="row">
 
       <p style="color: #444444;font-size: 150%;text-align:center">Schiene 2 : 20:00-21:00</p>
 
-      
+      <div class="">
         <div class="input-field col s7 push-s3">
 
         <select name="wunsch2">
@@ -174,7 +171,7 @@ if(!empty($_GET['status'])){
           
 
         </div>
-     
+      </div>
     </div>
 
 
@@ -198,6 +195,7 @@ if(!empty($_GET['status'])){
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script>
+
       $(document).ready(function () {
         $('.sidenav').sidenav();
         $('.materialboxed').materialbox();

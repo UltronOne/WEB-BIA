@@ -87,15 +87,20 @@ if(!empty($_GET['status'])){
 
     <?php 
       
-      echo '<a href="#" class="brand-logo">'.$_SESSION['username'].'</a>';
+      echo '<a href="#" class="brand-logo">'              .$_SESSION['username'].'</a>';
    ?>
 
-     <a href="#" class="brand-logo"></a>
+    
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>
+
+
+  
+      
+
 
 <?php if(!empty($statusMsg)){
         
@@ -104,6 +109,34 @@ if(!empty($_GET['status'])){
       } ?>
 
   
+
+<div class="container"><a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+      <ul id="nav-mobile" class="sidenav sidenav-fixed">
+       
+        
+        
+        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">CSS</a>
+             
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Components</a>
+             
+            </li>
+            <li class="bold active"><a class="collapsible-header waves-effect waves-teal">JavaScript</a>
+              
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Forms</a>
+              
+            </li>
+          </ul>
+        </li>
+        <li class="bold"><a href="mobile.html" class="waves-effect waves-teal">Mobile</a></li>
+        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Showcase</a></li>
+        <li class="bold"><a href="themes.html" class="waves-effect waves-teal">Themes<span data-badge-caption="updated" class="new badge"></span></a></li>
+      </ul>
 
   <div class="container">
 
@@ -218,7 +251,7 @@ if(!empty($_GET['status'])){
   
 
                     
-      
+  
   
 
 
@@ -239,7 +272,8 @@ if(!empty($_GET['status'])){
   
    
 
-    $(document).ready(function () {
+    $(document).ready(function () {  
+    $('.sidenav').sidenav();
       $('.collapsible').collapsible();
       $('.sidenav').sidenav();
       $('.materialboxed').materialbox();
