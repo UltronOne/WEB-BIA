@@ -77,6 +77,7 @@ if(!empty($_GET['status'])){
     .tabs .tab a:focus, .tabs .tab a:focus.active{
       background: transparent;
     }
+    
   </style>
 </head>
 
@@ -87,7 +88,7 @@ if(!empty($_GET['status'])){
 
     <?php 
       
-      echo '<a href="#" class="brand-logo">'.$_SESSION['username'].'</a>';
+      echo '<a href="#" class="brand-logo" >'.$_SESSION['username'].'</a>';
    ?>
 
      <a href="#" class="brand-logo"></a>
@@ -122,7 +123,7 @@ if(!empty($_GET['status'])){
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung" data-length="500"></textarea>
+                <textarea id="textarea2" class="materialize-textarea" data-length="500"></textarea>
             <label for="textarea2">Beschreibung</label>
                 </div>
               </div>
@@ -132,11 +133,10 @@ if(!empty($_GET['status'])){
         </div>
         
   </form>
-  
     </div>
 
-   
-    <button class="btn waves-effect waves-light" type="submit" name="berufeLöschen">Alle Berufe löschen</i></button>
+    
+
     
 <?php if(!empty($statusMsg)){
       
@@ -201,7 +201,7 @@ if(!empty($_GET['status'])){
                       <td><?php echo $row['w2']; ?></td>
                     </tr>
                     <?php } }else{ ?>
-                    <tr><td colspan="5">Keine Beunutzer gefunden......</td></tr>
+                    <tr><td colspan="5">No member(s) found.....</td></tr>
                     <?php } ?>
               </tbody>
             </table>
@@ -209,15 +209,13 @@ if(!empty($_GET['status'])){
         </div>
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="nutzerLöschen">Alle Nutzer löschen</i>
-  </button>
   </div>
 
 
-                    
-  
 
-                    
+
+
+ 
       
   
 
