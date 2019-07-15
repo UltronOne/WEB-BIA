@@ -1,5 +1,5 @@
  h1{
-          margin-top: 300px;
+          margin-top: 200px;
           font-size: 2em;
           font-weight: 400;
 		  line-height: 1.5;
@@ -7,7 +7,7 @@
 		  letter-spacing: 0.375rem;
 	}
  h2{
-        margin-top: 200px;
+        margin-top: 50px;
         text-align: center;
 		font-weight: 400;
 		line-height: 1.5;
@@ -44,6 +44,7 @@ p2{
     letter-spacing: 0.0875rem;
     }
 
+
 .button{
         width: 100%;
         text-align: center;
@@ -76,11 +77,11 @@ p2{
 
 
 
-
     header{
       background: url(img/banner.jpg);
       background-size: cover;
       background-position: center;
+
       min-height: 1000px;
 
  @media screen and (max-width: 670px){
@@ -89,3 +90,4 @@ p2{
       }
     }
         
+

@@ -77,6 +77,7 @@ if(!empty($_GET['status'])){
     .tabs .tab a:focus, .tabs .tab a:focus.active{
       background: transparent;
     }
+    
   </style>
 </head>
 
@@ -87,20 +88,15 @@ if(!empty($_GET['status'])){
 
     <?php 
       
-      echo '<a href="#" class="brand-logo">'              .$_SESSION['username'].'</a>';
+      echo '<a href="#" class="brand-logo" >'.$_SESSION['username'].'</a>';
    ?>
 
-    
+     <a href="#" class="brand-logo"></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>
-
-
-  
-      
-
 
 <?php if(!empty($statusMsg)){
         
@@ -109,34 +105,6 @@ if(!empty($_GET['status'])){
       } ?>
 
   
-
-<div class="container"><a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a></div>
-      <ul id="nav-mobile" class="sidenav sidenav-fixed">
-       
-        
-        
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
-        <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a></li>
-        <li class="no-padding">
-          <ul class="collapsible collapsible-accordion">
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">CSS</a>
-             
-            </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Components</a>
-             
-            </li>
-            <li class="bold active"><a class="collapsible-header waves-effect waves-teal">JavaScript</a>
-              
-            </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Forms</a>
-              
-            </li>
-          </ul>
-        </li>
-        <li class="bold"><a href="mobile.html" class="waves-effect waves-teal">Mobile</a></li>
-        <li class="bold"><a href="showcase.html" class="waves-effect waves-teal">Showcase</a></li>
-        <li class="bold"><a href="themes.html" class="waves-effect waves-teal">Themes<span data-badge-caption="updated" class="new badge"></span></a></li>
-      </ul>
 
   <div class="container">
 
@@ -155,7 +123,7 @@ if(!empty($_GET['status'])){
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung" data-length="500"></textarea>
+                <textarea id="textarea2" class="materialize-textarea" data-length="500"></textarea>
             <label for="textarea2">Beschreibung</label>
                 </div>
               </div>
@@ -165,11 +133,10 @@ if(!empty($_GET['status'])){
         </div>
         
   </form>
-  
     </div>
 
-   
-    <button class="btn waves-effect waves-light" type="submit" name="berufeLöschen">Alle Berufe löschen</i></button>
+    
+
     
 <?php if(!empty($statusMsg)){
       
@@ -234,7 +201,7 @@ if(!empty($_GET['status'])){
                       <td><?php echo $row['w2']; ?></td>
                     </tr>
                     <?php } }else{ ?>
-                    <tr><td colspan="5">Keine Beunutzer gefunden......</td></tr>
+                    <tr><td colspan="5">No member(s) found.....</td></tr>
                     <?php } ?>
               </tbody>
             </table>
@@ -242,16 +209,14 @@ if(!empty($_GET['status'])){
         </div>
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="nutzerLöschen">Alle Nutzer löschen</i>
-  </button>
   </div>
 
 
-                    
-  
 
-                    
-  
+
+
+ 
+      
   
 
 
@@ -272,8 +237,7 @@ if(!empty($_GET['status'])){
   
    
 
-    $(document).ready(function () {  
-    $('.sidenav').sidenav();
+    $(document).ready(function () {
       $('.collapsible').collapsible();
       $('.sidenav').sidenav();
       $('.materialboxed').materialbox();
