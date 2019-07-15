@@ -1,3 +1,4 @@
+
 <?php  
 //Starten der Session
 session_start();
@@ -44,7 +45,7 @@ if (isset($_SESSION['username'])){
   $username = $_SESSION['username'];
 
 if($_SESSION['username']=="admin"){
-  header('Location: adminPanel.php');
+  header('Location: panel.php');
 }else{
   header('Location: userPanel.php');
 
@@ -176,12 +177,10 @@ if($_SESSION['username']=="admin"){
           <i class="material-icons" style="color: #444444">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#berufe" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
-          <li><a href="#login" style="color: #444444"><i class="material-icons left">vpn_key</i>Login</a></li>
+          <li><a href="berufe.php" style="color: #444444">Berufe</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
-          <li><a href="#berufe" ><i class="material-icons left">person</i>Berufe</a></li>
-          <li><a href="#login"><i class="material-icons left">vpn_key</i>Login</a></li>
+          <li><a href="berufe.php" >Berufe</a></li>
         </ul>
       </div>
     </nav>
@@ -226,7 +225,7 @@ if($_SESSION['username']=="admin"){
             <center>
               <div class='row'>
                   <div class="col s12">
-                <button type='submit' name='btn_login' class='button' >Login</button>
+                <button type='submit' name='btn_login' class='button' ">Login</button>
                   </div>
               </div>
             </center>
