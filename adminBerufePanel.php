@@ -17,6 +17,18 @@ if($_SESSION['username']!="admin"){
   header('Location: logout.php');  
 }
 
+$token = 'XXXXXXXXXXXX';
+
+//Anzeigen des Tokens mit der Get Methode
+if(!empty($_GET['token'])){
+  
+          $token = $_GET['token'];
+        
+  
+}
+
+
+
 
 ?>
 
@@ -109,12 +121,30 @@ if($_SESSION['username']!="admin"){
                   <h2 class="mdl-card__title-text" style="color: #444444">Neuen Token erstellen</h2>
                 </div>
                 <div class="mdl-card__supporting-text">
-                  Hier steht dein Token
+
+              
+                <?php  
+                   echo '<h5>'  .$token. '</h5>'; 
+                 ?>
                 </div>
+
+
                 <div class="mdl-card__actions mdl-card--border">
-                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    Erstellen
-                  </a>
+
+
+
+                <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
+              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="generateToken" value="Erstellen">
+            
+            </form>
+         
+
+
+                 
+
+
+                 
+
                 </div>
               
               </div>
