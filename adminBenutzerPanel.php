@@ -78,9 +78,9 @@ if($_SESSION['username']!="admin"){
             
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="adminPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="adminBerufePanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Benutzer</a>
-          <a class="mdl-navigation__link" href="adminBenutzerPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
+          <a class="mdl-navigation__link" href="adminPanelnew.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="berufePanel.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Benutzer</a>
+          <a class="mdl-navigation__link" href="benutzerliste.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
          
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
@@ -90,7 +90,7 @@ if($_SESSION['username']!="admin"){
     <!--Tabbellen-->
     <div class="mdl-grid">
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-cell mdl-cell--6-col">
                 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzer hinzufügen</h2>
@@ -107,7 +107,7 @@ if($_SESSION['username']!="admin"){
             </div>
             <div class="mdl-layout-spacer"></div>
             <div class="mdl-layout-spacer"></div>
-            <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-cell mdl-cell--6-col">
                 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzerliste herunterladen</h2>
@@ -128,6 +128,7 @@ if($_SESSION['username']!="admin"){
             </div>
             <div class="mdl-layout-spacer"></div>
         </div>
+      </div>
         <div class="mdl-grid">
                 <div class="mdl-layout-spacer"></div>
     
@@ -161,7 +162,7 @@ if($_SESSION['username']!="admin"){
               </table>
               </div>
               </div>
-              </div>
+             
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
@@ -171,4 +172,5 @@ if($_SESSION['username']!="admin"){
           </script>
   </body>
 </html>
+
 
