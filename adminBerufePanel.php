@@ -189,15 +189,22 @@ if(!empty($_GET['token'])){
         </div>
       </div>
 
+      <?php
+                    
+                    $query = $db->query("SELECT head, besch, token FROM berufe");
+                    if($query->num_rows > 0){ 
+                        while($row = $query->fetch_assoc()){ ?>
+                    
+
+
       <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
         <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">*Beruf*</h2>
+          <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
         </div>
         <div class="mdl-card__supporting-text">
-                *Beschreibung*Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
+        <?php echo $row['besch']; ?>
         </div>
         <div class="mdl-card__actions mdl-card--border" >
                 <div class="mdl-grid" >
@@ -223,6 +230,13 @@ if(!empty($_GET['token'])){
         </div>
       </div>
       </div>
+
+      <?php }
+                    }?>
+
+
+
+
 
     </div>
 

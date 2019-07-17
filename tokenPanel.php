@@ -1,3 +1,33 @@
+<?php
+
+session_start();
+
+
+
+
+include 'dbConfig.php';
+
+
+
+if(!isset($_SESSION['token'])) {
+  
+  header('Location: tokenlogin.php');  
+}
+
+$token = $_SESSION['token'];
+     
+
+
+$query =  $db->query("SELECT head, besch FROM berufe WHERE token='$token'");
+
+
+$row = mysqli_fetch_assoc($query);
+  $head =  $row['head']; 
+  $besch =  $row['besch']; 
+
+ 
+
+?>
 <html>
 
 <head>
@@ -28,6 +58,12 @@
  
   <style>
    
+   #id1 {
+  margin-left : 30px;
+  margin-right: 30px;
+}
+
+
   </style>
 </head>
 
@@ -42,11 +78,11 @@
           </a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#berufe" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
-            <li><a href="#login" style="color: #444444"><i class="material-icons left">power_settings_new</i>Logout</a></li>
+            <li><a href="logout.php" style="color: #444444"><i class="material-icons left">power_settings_new</i>Logout</a></li>
           </ul>
           <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
             <li><a href="#berufe" ><i class="material-icons left">person</i>Berufe</a></li>
-            <li><a href="#login"><i class="material-icons left">power_settings_new</i>Logout</a></li>
+            <li><a href="logout.php"><i class="material-icons left">power_settings_new</i>Logout</a></li>
           </ul>
         </div>
       </nav>
@@ -57,25 +93,33 @@
     </header>
 <!-- Gib bei data-length="" die maximale Länge an-->
 
-    <div class="row">
-        <div class="col s12" style="text-align: center">
-          <div class="card white-grey darken-1">
-            <div class="card-content black-text" style="text-align: center">
-                <div class="input-field">
-                    <input id="input_text" type="text" data-length="10">
-                    <label for="input_text">Beruf</label>
-                  </div>
-                  <div class="input-field">
-                    <textarea id="textarea2" class="materialize-textarea" data-length="120" style="height: 20%;box-shadow: 4px 4px 4px #f6f6f6;"></textarea>
-                    <label for="textarea2">Beschreibung</label>
-                  </div>
-            </div>
-            <div class="card-action">
-              <a href="#">Bestätigen</a>
-            </div>
+<div id="id1">
+<form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
+    <div class="col s12">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Beruf hinzufügen</span>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="input_text" type="text" name="textHead" value="<?php echo $head;?>" data-length="25">
+                  <label for="input_text">Überschrift</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung"   data-length="500"><?php echo $besch;?></textarea>
+            <label for="textarea2">Beschreibung</label>
+                </div>
+              </div>
+              <input type="submit" class="btn btn-primary" name="updateBeruf" value="Hinzufügen">
+            </form>
           </div>
         </div>
-      </div>
+        
+  </form>
+  </div>
 
 <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

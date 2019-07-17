@@ -74,9 +74,12 @@ if(isset($_POST['updateBeruf'])){
     
                 $txtHead = $_POST["textHead"];
                 $txtBeschreibung = $_POST["textBeschreibung"];
-                $db->query("INSERT INTO berufe (head, besch) VALUES ('$txtHead','$txtBeschreibung')");
+                $token = $_SESSION['token'];
                 
-                header("Location: adminPanel.php".$qstring);
+             //   $db->query("UPDATE berufe SET  head = '$txtHead' , besch ='$txtBeschreibung'");
+                $db->query("UPDATE berufe SET head='$txtHead', besch='$txtBeschreibung' WHERE token='$token'");
+                
+                header("Location: tokenPanel.php".$qstring);
     
 }
 
