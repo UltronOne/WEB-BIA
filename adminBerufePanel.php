@@ -70,7 +70,7 @@ if(!empty($_GET['token'])){
     <link rel="stylesheet" href="main_adminpanel.css">
     <style>
  .demo-card-wide.mdl-card {
-  width: 512px;
+  width: 350px;
   color: #444444
 }
 .demo-card-wide > .mdl-card__title {
@@ -103,9 +103,9 @@ if(!empty($_GET['token'])){
             
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href="adminPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href="adminBerufePanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Benutzer</a>
-          <a class="mdl-navigation__link" href="adminBenutzerPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
+          <a class="mdl-navigation__link" href="adminPanelnew.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="berufePanel.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Benutzer</a>
+          <a class="mdl-navigation__link" href="benutzerliste.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
          
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
@@ -126,25 +126,11 @@ if(!empty($_GET['token'])){
                 <?php  
                    echo '<h5>'  .$token. '</h5>'; 
                  ?>
-                </div>
-
-
+                                </div>
                 <div class="mdl-card__actions mdl-card--border">
-
-
-
-                <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
-              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="generateToken" value="Erstellen">
-            
-            </form>
-         
-
-
-                 
-
-
-                 
-
+                  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Erstellen
+                  </a>
                 </div>
               
               </div>
@@ -167,17 +153,17 @@ if(!empty($_GET['token'])){
         </div>
         <div class="mdl-card__actions mdl-card--border" >
                 <div class="mdl-grid" >
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Token Anzeigen
           </a>
           </div>
-          <div class="mdl-cell mdl-cell--3-col">
+          <div class="mdl-cell mdl-cell--4-col">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 bearbeiten
               </a>
               </div>
-              <div class="mdl-cell mdl-cell--3-col">
+              <div class="mdl-cell mdl-cell--4-col">
               <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                     löschen
                   </a>
@@ -197,28 +183,29 @@ if(!empty($_GET['token'])){
                     
 
 
-      <div class="mdl-cell mdl-cell--4-col">
+     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
         <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
+          <h2 class="mdl-card__title-text">*Beruf*</h2>
         </div>
         <div class="mdl-card__supporting-text">
-        <?php echo $row['besch']; ?>
+                *Beschreibung*Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris sagittis pellentesque lacus eleifend lacinia...
         </div>
         <div class="mdl-card__actions mdl-card--border" >
                 <div class="mdl-grid" >
-                        <div class="mdl-cell mdl-cell--6-col">
+                        <div class="mdl-cell mdl-cell--4-col">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Token Anzeigen
           </a>
           </div>
-          <div class="mdl-cell mdl-cell--3-col">
+          <div class="mdl-cell mdl-cell--4-col">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 bearbeiten
               </a>
               </div>
-              <div class="mdl-cell mdl-cell--3-col">
+              <div class="mdl-cell mdl-cell--4-col">
               <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                     löschen
                   </a>
@@ -231,6 +218,7 @@ if(!empty($_GET['token'])){
       </div>
       </div>
 
+    </div>
       <?php }
                     }?>
 
