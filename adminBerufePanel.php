@@ -73,6 +73,43 @@ if(!empty($_GET['token'])){
   width: 512px;
   color: #444444
 }
+.mdl-dialog {
+  border: none;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  width: 380px; }
+  .mdl-dialog__title {
+    padding: 24px 24px 0;
+    margin: 0;
+    font-size: 2.5rem; }
+  .mdl-dialog__actions {
+    padding: 8px 8px 8px 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .mdl-dialog__actions > * {
+      margin-right: 8px;
+      height: 36px; }
+      .mdl-dialog__actions > *:first-child {
+        margin-right: 0; }
+    .mdl-dialog__actions--full-width {
+      padding: 0 0 8px 0; }
+      .mdl-dialog__actions--full-width > * {
+        height: 48px;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        padding-right: 16px;
+        margin-right: 0;
+        text-align: right; }
+  .mdl-dialog__content {
+    padding: 20px 24px 24px 24px;
+    color: rgba(0,0,0, 0.54); }
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 100px;
@@ -118,7 +155,7 @@ if(!empty($_GET['token'])){
         <div class="mdl-cell mdl-cell--12-col">
             <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="background-color: #CDCDCD">
                 <div class="mdl-card__title">
-                  <h2 class="mdl-card__title-text" style="color: #444444">Neuen Token erstellen</h2>
+                  <h2 class="mdl-card__title-text" style="color: #444444">Neuen Token/Beruf erstellen</h2>
                 </div>
                 <div class="mdl-card__supporting-text">
 
@@ -157,38 +194,7 @@ if(!empty($_GET['token'])){
     <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--7-col">
 
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="background: url('')">
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">*Beruf*</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-                *Beschreibung* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
-        </div>
-        <div class="mdl-card__actions mdl-card--border" >
-                <div class="mdl-grid" >
-                        <div class="mdl-cell mdl-cell--6-col">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Token Anzeigen
-          </a>
-          </div>
-          <div class="mdl-cell mdl-cell--3-col">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                bearbeiten
-              </a>
-              </div>
-              <div class="mdl-cell mdl-cell--3-col">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    löschen
-                  </a>
-                  </div>
-                </div>
-        </div>
-        <div class="mdl-card__menu">
-          </div>
-        </div>
-      </div>
-
+   
       <?php
                     
                     $query = $db->query("SELECT head, besch, token FROM berufe");
@@ -209,19 +215,48 @@ if(!empty($_GET['token'])){
         <div class="mdl-card__actions mdl-card--border" >
                 <div class="mdl-grid" >
                         <div class="mdl-cell mdl-cell--6-col">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Token Anzeigen
-          </a>
+          
+
+                        <button id="show-dialog" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Token anzeigen</button>
+  <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Token des Berufs</h4>
+    <div class="mdl-dialog__content">
+      <h4>
+      <?php echo $row['token']; ?>
+      </h4>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">Schließen</button>
+    </div>
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+          
+
+
           </div>
           <div class="mdl-cell mdl-cell--3-col">
-          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                bearbeiten
+          <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Bearbeiten
               </a>
               </div>
               <div class="mdl-cell mdl-cell--3-col">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    löschen
-                  </a>
+              <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
+              <input type="hidden" name="token" value="<?php echo $row['token']; ?>">
+              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="deleteBeruf" value="Löschen">
+            
+            </form>
                   </div>
                 </div>
         </div>

@@ -68,6 +68,17 @@ if(isset($_POST['generateToken'])){
 
 }
 
+if(isset($_POST['deleteBeruf'])){
+    
+    $token = $_POST["token"];
+    
+    
+ //   $db->query("UPDATE berufe SET  head = '$txtHead' , besch ='$txtBeschreibung'");
+    $db->query("DELETE FROM berufe WHERE token='$token'");
+    
+    header("Location: adminBerufePanel.php");
+
+}
 
 
 if(isset($_POST['updateBeruf'])){

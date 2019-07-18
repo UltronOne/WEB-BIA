@@ -3,6 +3,25 @@
 session_start();
  require('dbConfig.php');
 
+if(isset($_GET['token'])){
+
+  $token = $_GET['token'];
+
+  $query = "SELECT * FROM `berufe` WHERE token='$token'";
+  $result = mysqli_query($db, $query) or die(mysqli_error($db));
+  $count = mysqli_num_rows($result);
+ 
+  if ($count == 1){
+  $_SESSION['token'] = $token;
+  }else{
+
+  $fmsg = "Ungültiger Token";
+  
+  }
+
+
+
+}
 
 if (isset($_POST['token'])){
 
