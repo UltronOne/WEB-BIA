@@ -132,6 +132,8 @@ if(!empty($_GET['token'])){
          
         </div>
       </header>
+      
+      <div style="position:fixed">
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
           <img src="img/user.jpg" class="demo-avatar" style="margin-bottom: 1em">
@@ -148,7 +150,8 @@ if(!empty($_GET['token'])){
           <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
         </nav>
       </div>
-
+</div>
+        
     <!--Tabbellen-->
     <div class="mdl-grid">
         <div class="mdl-layout-spacer"></div>
