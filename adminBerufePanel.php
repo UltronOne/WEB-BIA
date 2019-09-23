@@ -193,11 +193,10 @@ if(!empty($_GET['token'])){
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
         <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text">*Beruf*</h2>
+          <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
         </div>
         <div class="mdl-card__supporting-text">
-                *Beschreibung*Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
+               <?php echo $row['besch']; ?>
         </div>
         <div class="mdl-card__actions mdl-card--border" >
                 <div class="mdl-grid" >
