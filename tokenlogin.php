@@ -1,55 +1,54 @@
-
 <?php  
 //Starten der Session
 session_start();
  require('dbConfig.php');
 
+if(isset($_GET['token'])){
 
-if (isset($_POST['username']) and isset($_POST['password'])){
+  $token = $_GET['token'];
 
-//Werte werden gesetzt
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-//user wird überprüft
-if($username=="admin"){
-  $query = "SELECT * FROM `admin` WHERE user='$username' and pass='$password'";
+  $query = "SELECT * FROM `berufe` WHERE token='$token'";
   $result = mysqli_query($db, $query) or die(mysqli_error($db));
   $count = mysqli_num_rows($result);
  
   if ($count == 1){
-  $_SESSION['username'] = $username;
+  $_SESSION['token'] = $token;
   }else{
 
-  $fmsg = "Passwort Falsch";
+  $fmsg = "Ungültiger Token";
   
   }
 
-}else{
-  $query = "SELECT * FROM `benutzer` WHERE user='$username' and pass='$password'";
+
+
+}
+
+if (isset($_POST['token'])){
+
+//Werte werden gesetzt
+$token = $_POST['token'];
+
+
+//user wird überprüft
+
+  $query = "SELECT * FROM `berufe` WHERE token='$token'";
   $result = mysqli_query($db, $query) or die(mysqli_error($db));
-$count = mysqli_num_rows($result);
+  $count = mysqli_num_rows($result);
+ 
+  if ($count == 1){
+  $_SESSION['token'] = $token;
+  }else{
 
-if ($count == 1){
-$_SESSION['username'] = $username;
-}else{
+  $fmsg = "Ungültiger Token";
+  
+  }
 
-$fmsg = "Passwort Falsch";
-
-
-}
-}
-}
-
-if (isset($_SESSION['username'])){
-  $username = $_SESSION['username'];
-
-if($_SESSION['username']=="admin"){
-  header('Location: adminPanel.php');
-}else{
-  header('Location: userPanel.php');
 
 }
+
+if (isset($_SESSION['token'])){
+  $sessiontoken = $_SESSION['token'];
+  header('Location: tokenPanel.php');
 
   
   exit();
@@ -59,8 +58,6 @@ if($_SESSION['username']=="admin"){
   
 
 ?>
-
-
 
 <html>
 
@@ -171,29 +168,30 @@ if($_SESSION['username']=="admin"){
     
   <header>
     <nav class="nav-wrapper transparent" >
-      <div class="container" >
-        <a href="index.html" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
-        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-          <i class="material-icons" style="color: #444444">menu</i>    
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="userBerufePanel.php" style="color: #444444">Berufe</a></li>
-        </ul>
-        <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
-          <li><a href="berufe.php" >Berufe</a></li>
-        </ul>
-      </div>
-    </nav>
+        <div class="container" >
+          <a href="#" class="brand-logo" style="color: #444444">Token Login</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+            <i class="material-icons" style="color: #444444">menu</i>    
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#berufe" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
+            <li><a href="#login" style="color: #444444"><i class="material-icons left">vpn_key</i>Login</a></li>
+          </ul>
+          <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
+            <li><a href="#berufe" ><i class="material-icons left">person</i>Berufe</a></li>
+            <li><a href="#login"><i class="material-icons left">vpn_key</i>Login</a></li>
+          </ul>
+        </div>
+      </nav>
     
     
     
   <div class="section"></div>
   <main>
     <center>
-      <img class="responsive-img" style="width: 250px;align-content: center" src="img/rabe.png" />
       <div class="section"></div>
 
-      <h5 class="text" style="color: #444444">Bitte loggen sie sich ein</h5>
+      <p class="flow-text" style="color: #444444,">Bitte loggen sie sich mit <br>ihrem Berufstoken ein</p>
       <div class="section"></div>
 
       <div class="container">
@@ -205,18 +203,14 @@ if($_SESSION['username']=="admin"){
               </div>
             </div>
 
-            <div class='row'>
+            <div class='row' style="width: 120%">
               <div class='input-field col s12'>
-              <input class='validate' type='text' name='username' id='text' />
-                <label for='text'>Username</label>
+              <input class='validate' type='text' name='token' id='text'/>
+                <label for='text'>Berufetoken</label>
               </div>
             </div>
 
-            <div class='row'>
-              <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Passwort</label>
-              </div>
+            
               <label style='float: right;'>
 								<a class='pink-text' ><b>Passwort wurde per Email verschickt</b></a>
 							</label>
@@ -264,4 +258,6 @@ if($_SESSION['username']=="admin"){
 </body>
 
 </html>
+
+
 <?php } ?>
