@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
+<<<<<<< Updated upstream
     #view-source {
       position: fixed;
       display: block;
@@ -40,6 +41,59 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+=======
+ .demo-card-wide.mdl-card {
+  width: 450px;
+  color: #444444
+}
+.mdl-dialog {
+  border: none;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  width: 380px; }
+  .mdl-dialog__title {
+    padding: 24px 24px 0;
+    margin: 0;
+    font-size: 2.5rem; }
+  .mdl-dialog__actions {
+    padding: 8px 8px 8px 24px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .mdl-dialog__actions > * {
+      margin-right: 8px;
+      height: 36px; }
+      .mdl-dialog__actions > *:first-child {
+        margin-right: 0; }
+    .mdl-dialog__actions--full-width {
+      padding: 0 0 8px 0; }
+      .mdl-dialog__actions--full-width > * {
+        height: 48px;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+        padding-right: 16px;
+        margin-right: 0;
+        text-align: right; }
+  .mdl-dialog__content {
+    padding: 20px 24px 24px 24px;
+    color: rgba(0,0,0, 0.54); }
+.center { 
+margin: 0 auto; 
+width:455px;
+}
+.right { 
+align: right;
+}
+
+
+
+>>>>>>> Stashed changes
     </style>
   <script src="moz-extension://17014436-4eb1-4316-9c20-72c132a23f4f/assets/prompt.js"></script></head>
   <body>
@@ -90,6 +144,7 @@
 
 
 
+<<<<<<< Updated upstream
 
       <div class="mdl-grid">
         <div class="mdl-layout-spacer"></div>
@@ -114,8 +169,43 @@
               </div>
         </div>
         <div class="mdl-layout-spacer"></div>
-    </div>
+=======
+      <main class="mdl-layout__content mdl-color--grey-100">
+        
+     
+      <div class = "mdl-grid">
+                 
+                 <div class = "mdl-cell mdl-cell--12-col graybox">
+                    <div class = "center">
+                      
 
+
+
+
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+  <div class = "right">
+    <a  class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Get Started
+    </a>
+>>>>>>> Stashed changes
+    </div>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+  </div>
+</div>
+
+<<<<<<< Updated upstream
 <!--WICHTIG: WENN DU EIN BILD HINZUFÜGEN WILLST ÄNDERST DU DEN BACKGROUND ZU DEM BILD bei class="demo-card-wide mdl-card mdl-shadow--2dp" -->
 <ul class='mdl-list'>
 <!--EINE CARD GEHT HIER LOS -->
@@ -199,10 +289,17 @@
     </li>
 <!--EINE CARD HÖRT HIER AUF-->
 <!--EINE CARD GEHT HIER LOS -->
+=======
+
+
+
+
+>>>>>>> Stashed changes
 
 <li class="mdl-list__item" style="    float: left;">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
+<<<<<<< Updated upstream
         <div class="mdl-card__title">
           <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
         </div>
@@ -211,6 +308,12 @@
         </div>
         <div class="mdl-card__actions mdl-card--border" >
           
+=======
+                      </div>
+                    </div>
+               
+              </div>
+>>>>>>> Stashed changes
 
                         <button id="show-dialog" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Token anzeigen</button>
   <dialog class="mdl-dialog">
@@ -223,6 +326,7 @@
       <button type="button" class="mdl-button close">Schließen</button>
   </dialog>
 
+<<<<<<< Updated upstream
           <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Bearbeiten
               </a>
@@ -239,7 +343,50 @@
     </li>
 <!--EINE CARD HÖRT HIER AUF-->
 
+=======
+>>>>>>> Stashed changes
 
+         
+        <div class = "mdl-grid">
+                 <div class = "mdl-cell mdl-cell--1-col graybox">1</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">2</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">3</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">4</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">5</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">6</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">7</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">8</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">9</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">10</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">11</div>
+                 <div class = "mdl-cell mdl-cell--1-col graybox">12</div>
+              </div>
+              
+              <div class = "mdl-grid">
+                 <div class = "mdl-cell mdl-cell--4-col graybox">1</div>
+                 <div class = "mdl-cell mdl-cell--4-col graybox">2</div>
+                 <div class = "mdl-cell mdl-cell--4-col graybox">3</div>
+              </div>
+              
+              <div class = "mdl-grid">
+                 <div class = "mdl-cell mdl-cell--6-col graybox">6</div>
+                 <div class = "mdl-cell mdl-cell--4-col graybox">4</div>
+                 <div class = "mdl-cell mdl-cell--2-col graybox">2</div>
+              </div>
+              
+              <div class = "mdl-grid">
+                 <div class = "mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet graybox">
+                    6 on desktop, 8 on tablet</div>
+                 <div class = "mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet graybox">
+                    4 on desktop, 6 on tablet</div>
+                 <div class = "mdl-cell mdl-cell--2-col mdl-cell--4-col-phone graybox">
+                    2 on desktop, 4 on phone</div>
+              </div>
+       
+  
+        </main>
+      </div>
+       
 
 
 </ul>
