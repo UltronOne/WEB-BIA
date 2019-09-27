@@ -77,7 +77,7 @@ $row = mysqli_fetch_assoc($query);
             <i class="material-icons" style="color: #444444">menu</i>    
           </a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="userberufepanel.php" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
+            <li><a href="#berufe" style="color: #444444"><i class="material-icons left">person</i>Berufe</a></li>
             <li><a href="logout.php" style="color: #444444"><i class="material-icons left">power_settings_new</i>Logout</a></li>
             <?php  
 
@@ -86,7 +86,7 @@ if($_SESSION['username']=="admin"){
   ?>
 
          
-            <li><a href="adminberufepanel.php" style="color: #444444"><i class="material-icons left">person</i>Adminpanel</a></li>
+            <li><a href="adminpanel.php" style="color: #444444"><i class="material-icons left">person</i>Adminpanel</a></li>
          
           </ul>
        
@@ -106,7 +106,7 @@ if($_SESSION['username']=="admin"){
   ?>
 
          
-            <li><a href="adminberufepanel.php" style="color: #444444"><i class="material-icons left">person</i>Adminpanel</a></li>
+            <li><a href="adminpanel.php" style="color: #444444"><i class="material-icons left">person</i>Adminpanel</a></li>
          
           </ul>
        
