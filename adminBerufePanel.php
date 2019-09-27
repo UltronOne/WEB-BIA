@@ -1,3 +1,24 @@
+<?php
+session_start();
+include 'dbConfig.php';
+if(!isset($_SESSION['username'])) {
+  
+  header('Location: login.php');  
+}
+if($_SESSION['username']!="admin"){
+  header('Location: logout.php');  
+}
+$token = 'XXXXXXXXXXXX';
+//Anzeigen des Tokens mit der Get Methode
+if(!empty($_GET['token'])){
+  
+          $token = $_GET['token'];
+        
+  
+}
+?>
+
+
 <html class="mdl-js" lang="en"><head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -157,8 +178,7 @@
        
     </div>
     </li>
-<!--EINE CARD HÖRT HIER AUF-->
-<!--EINE CARD GEHT HIER LOS -->
+
 
 <li class="mdl-list__item" style="    float: left;">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
@@ -197,8 +217,7 @@
        
     </div>
     </li>
-<!--EINE CARD HÖRT HIER AUF-->
-<!--EINE CARD GEHT HIER LOS -->
+
 
 <li class="mdl-list__item" style="    float: left;">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
