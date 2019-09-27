@@ -85,7 +85,7 @@ if(!empty($_GET['status'])){
   <header>
     <nav class="nav-wrapper transparent">
       <div class="container">
-        <a href="#" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
+        <a href="index.html" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons" style="color: #444444">menu</i>
         </a>

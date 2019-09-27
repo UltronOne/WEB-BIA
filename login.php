@@ -172,12 +172,12 @@ if($_SESSION['username']=="admin"){
   <header>
     <nav class="nav-wrapper transparent" >
       <div class="container" >
-        <a href="#" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
+        <a href="index.html" class="brand-logo" style="color: #444444">Berufsinformationsabend</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons" style="color: #444444">menu</i>    
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="berufe.php" style="color: #444444">Berufe</a></li>
+          <li><a href="userBerufePanel.php" style="color: #444444">Berufe</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" style="color: #444444" id="mobile-menu">
           <li><a href="berufe.php" >Berufe</a></li>
