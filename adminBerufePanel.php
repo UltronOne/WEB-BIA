@@ -142,15 +142,28 @@ if(!empty($_GET['token'])){
 <!--EINE CARD GEHT HIER LOS -->
 
 <li class="mdl-list__item" style="    float: left;">
+      
+
+<?php
+                    
+                    $query = $db->query("SELECT head, besch, token FROM berufe");
+                    if($query->num_rows > 0){ 
+                        while($row = $query->fetch_assoc()){ ?>
+                    
+
+
+     <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
         <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
+          <h2 class="mdl-card__title-text"> <?php echo $row['head']; ?></h2>
         </div>
         <div class="mdl-card__supporting-text">
-               <?php echo $row['besch']; ?>
+        <?php echo $row['besch']; ?>
         </div>
         <div class="mdl-card__actions mdl-card--border" >
+                <div class="mdl-grid" >
+                        <div class="mdl-cell mdl-cell--6-col">
           
 
                         <button id="show-dialog" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Token anzeigen</button>
@@ -161,9 +174,28 @@ if(!empty($_GET['token'])){
       <?php echo $row['token']; ?>
       </h4>
     </div>
+    <div class="mdl-dialog__actions">
       <button type="button" class="mdl-button close">Schließen</button>
+    </div>
   </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+          
 
+
+          </div>
+          <div class="mdl-cell mdl-cell--3-col">
           <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Bearbeiten
               </a>
@@ -174,9 +206,20 @@ if(!empty($_GET['token'])){
               <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="deleteBeruf" value="Löschen">
             
             </form>
+                  </div>
+                </div>
         </div>
-       
+        <div class="mdl-card__menu">
+          
+        </div>
+      </div>
+      </div>
+
     </div>
+      <?php }
+                    }?>
+
+
     </li>
 
 
