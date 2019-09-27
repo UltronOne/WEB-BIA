@@ -133,7 +133,7 @@ if($_SESSION['username']!="admin"){
     
                 <div class="mdl-cell mdl-cell--12-col">
     
-        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="max-width: initial; text-align: left">
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" style="max-width: initial; text-align: left">
                 <thead>
                   <tr>
                     <th class="mdl-data-table__cell--non-numeric">Name</th>
