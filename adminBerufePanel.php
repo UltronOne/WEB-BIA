@@ -189,7 +189,7 @@ if(!empty($_GET['token'])){
                         while($row = $query->fetch_assoc()){ ?>
                     
 
-
+                    <li class="mdl-list__item" style="    float: left;">
      <div class="mdl-cell mdl-cell--4-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp">
 
@@ -254,10 +254,17 @@ if(!empty($_GET['token'])){
       </div>
 
     </div>
+    </li>  
       <?php }
-                    }?>
+          
+             
+             }?>
 
 
+<<<<<<< Updated upstream
+=======
+   
+>>>>>>> Stashed changes
 
 
 
