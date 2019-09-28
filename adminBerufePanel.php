@@ -179,7 +179,7 @@ if(!empty($_GET['token'])){
 <!--WICHTIG: WENN DU EIN BILD HINZUFÜGEN WILLST ÄNDERST DU DEN BACKGROUND ZU DEM BILD bei class="demo-card-wide mdl-card mdl-shadow--2dp" -->
 
     <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--7-col">
+    <div class="mdl-cell mdl-cell--7-col">
 
    
       <?php
