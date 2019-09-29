@@ -4,34 +4,18 @@ session_start();
 include 'dbConfig.php';
 
 if(isset($_POST['importSubmit'])){
-    
   
     $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
     if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$csvMimes)){
         if(is_uploaded_file($_FILES['file']['tmp_name'])){
-            
-           
             $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
-           
             fgetcsv($csvFile);
-            
-           
-            while (($row = fgetcsv($csvFile,0, ";")) !== FALSE) {
-               
+            while (($row = fgetcsv($csvFile,0, ";")) !== FALSE) { 
                 $user = mysqli_real_escape_string($db,$row[0]);
                 $pass = mysqli_real_escape_string($db,$row[1]);
-                echo $user;
-                echo $pass;
-                $db->query("INSERT INTO benutzer (user, pass) VALUES ('$user','$pass')");
-                
+                $db->query("INSERT INTO benutzer (user, pass) VALUES ('$user','$pass')");   
             }
-
-            
-
-            
-            
             fclose($csvFile);
-
             $qstring = '?status=succ';
         }else{
             $qstring = '?status=err';
@@ -39,9 +23,14 @@ if(isset($_POST['importSubmit'])){
     }else{
         $qstring = '?status=invalid_file';
     }
-    header("Location: adminPanel.php".$qstring);
+    header("Location: adminBenutzerPanel.php".$qstring);
 }
 
+
+
+
+
+//erzeugt einen zufälligen  String  mit der  länge $length
 function randString($length, $charset='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')
 {
     $str = '';
