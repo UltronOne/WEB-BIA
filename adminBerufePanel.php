@@ -199,50 +199,7 @@ if(!empty($_GET['token'])){
                     }?>
 
 
-    </li>
-
-
-
-    </li>
-
-
-<li class="mdl-list__item" style="    float: left;">
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-
-        <div class="mdl-card__title">
-          <h2 class="mdl-card__title-text"><?php echo $row['head']; ?></h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-               <?php echo $row['besch']; ?>
-        </div>
-        <div class="mdl-card__actions mdl-card--border" >
-          
-
-                        <button id="show-dialog" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Token anzeigen</button>
-  <dialog class="mdl-dialog">
-    <h4 class="mdl-dialog__title">Token des Berufs</h4>
-    <div class="mdl-dialog__content">
-      <h4>
-      <?php echo $row['token']; ?>
-      </h4>
-    </div>
-      <button type="button" class="mdl-button close">Schließen</button>
-  </dialog>
-
-          <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Bearbeiten
-              </a>
-              </div>
-              <div class="mdl-cell mdl-cell--3-col">
-              <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
-              <input type="hidden" name="token" value="<?php echo $row['token']; ?>">
-              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="deleteBeruf" value="Löschen">
-            
-            </form>
-        </div>
-       
-    </div>
-    </li>
+   
 <!--EINE CARD HÖRT HIER AUF-->
 
 
