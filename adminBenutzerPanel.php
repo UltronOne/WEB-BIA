@@ -88,26 +88,31 @@ if($_SESSION['username']!="admin"){
       </div>
 
     <!--Tabbellen-->
-    <div class="mdl-grid">
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-cell mdl-cell--4-col">
-                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-grid ">
+            
+            <div class="mdl-cell mdl-cell--6-col">
+
+            
+                <div class="card-wide mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzer hinzufügen</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                      File auswählen
-                    </div>
+                    <div class="mdl-card__supporting-text">File auswählen</div>
+                    
                     <div class="mdl-card__actions mdl-card--border">
-                      <input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" type="file" style="width: 80%">
-                    </input>
+                      <form action="importData.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="importSubmit" value="IMPORT">
+        </form>            
                     </div>
-                  
                   </div>
             </div>
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-layout-spacer"></div>
-            <div class="mdl-cell mdl-cell--4-col">
+           
+
+            
+
+
+            <div class="mdl-cell mdl-cell--6-col">
                 <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzerliste herunterladen</h2>
@@ -137,26 +142,33 @@ if($_SESSION['username']!="admin"){
                 <thead>
                   <tr>
                     <th class="mdl-data-table__cell--non-numeric">Name</th>
-                    <th>Klasse</th>
-                    <th>Wahl</th>
+                    <th>Passwort</th>
+                    <th>Wahl 1</th>
+                    <th>Wahl 2</th>
                   </tr>
                 </thead>
                 <tbody>
+                  
+
+                <?php
+                    
+                    $query = $db->query("SELECT user, w1, w2, pass FROM benutzer");
+                    if($query->num_rows > 0){ 
+                        while($row = $query->fetch_assoc()){ ?>
+
+
+                   
                   <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Christopher</td>
-                    <td>6d</td>
-                    <td>Kostet 2 Cent</td>
+                    <td class="mdl-data-table__cell--non-numeric"><?php echo $row['user']; ?></td>
+                    <td><?php echo $row['pass']; ?></td>
+                    <td><?php echo $row['w1']; ?></td>
+                    <td><?php echo $row['w2']; ?></td>
                   </tr>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Ranu der Boss</td>
-                    <td>10c</td>
-                    <td>$1.25</td>
-                  </tr>
-                  <tr>
-                    <td class="mdl-data-table__cell--non-numeric">Afrika</td>
-                    <td>10c</td>
-                    <td>$2.35</td>
-                  </tr>
+
+
+                  <?php }
+                    }?>
+
                 </tbody>
               </table>
               </div>
