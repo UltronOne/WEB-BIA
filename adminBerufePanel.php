@@ -164,20 +164,9 @@ if(!empty($_GET['token'])){
         <div class="mdl-card__actions mdl-card--border" >
           
 
-        <button id="show-dialog" type="button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Token anzeigen</button>
-  <dialog class="mdl-dialog">
-    <h4 class="mdl-dialog__title">Token des Berufs</h4>
-    <div class="mdl-dialog__content">
-      <h4>
-      <?php echo $row['token']; ?>
-      </h4>
-    </div>
-    <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button close">Schließen</button>
-    </div>
-  </dialog>
+       
 
-          <p>Token: <?php echo $row['token']; ?></p>
+          <a>Token: <?php echo $row['token']; ?></a>
           <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Bearbeiten
               </a>
