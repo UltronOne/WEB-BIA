@@ -177,7 +177,7 @@ if(!empty($_GET['token'])){
     </div>
   </dialog>
 
-
+          <p>Token: <?php echo $row['token']; ?></p>
           <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Bearbeiten
               </a>
