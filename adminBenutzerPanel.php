@@ -83,7 +83,7 @@ if($_SESSION['username']!="admin"){
           <a class="mdl-navigation__link" href="adminBenutzerPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
          
           <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
+          <a class="mdl-navigation__link" href="logout.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
         </nav>
       </div>
 
@@ -145,7 +145,8 @@ if($_SESSION['username']!="admin"){
                     <th>Passwort</th>
                     <th>Wahl 1</th>
                     <th>Wahl 2</th>
-                  </tr>
+             
+                 </tr>
                 </thead>
                 <tbody>
                   
