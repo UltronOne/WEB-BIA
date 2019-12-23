@@ -18,6 +18,7 @@ if(!empty($_GET['token'])){
 }
 ?>
 
+    <!-- UNBEARBEITETES MATERIALDESIGNLITE TEMPLATE START-->
 
 <html class="mdl-js" lang="en"><head>
     <meta charset="utf-8">
@@ -41,11 +42,6 @@ if(!empty($_GET['token'])){
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <link rel="shortcut icon" href="images/favicon.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -108,18 +104,18 @@ if(!empty($_GET['token'])){
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
+    <!-- UNBEARBEITETES MATERIALDESIGNLITE TEMPLATE HÖRT AUF-->
 
 
-
-
+    <!--Neue sortierungstabelle -->
       <div class="mdl-grid">
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-cell mdl-cell--12-col">
-            <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="background-color: #CDCDCD">
-                <div class="mdl-card__title">
+        <div class="mdl-layout-spacer"></div>    <!-- Abstand im Layout-->
+        <div class="mdl-cell mdl-cell--12-col"><!-- Spannt Ganzer Bildschirm ab-->
+            <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="background-color: #CDCDCD"> <!-- Schatten-->
+                <div class="mdl-card__title"><!--Titel -->
                   <h2 class="mdl-card__title-text" style="color: #444444">Neuen Token/Beruf erstellen</h2>
                 </div>
-                <div class="mdl-card__supporting-text">
+                <div class="mdl-card__supporting-text"> <!-- Abstand-->
 
               
                 <?php  
@@ -127,21 +123,22 @@ if(!empty($_GET['token'])){
                  ?>
                                 </div>
                 <div class="mdl-card__actions mdl-card--border">
-                <form action="importData.php" method="post" enctype="multipart/form-data" id="generateToken">
+                <form action="importData.php" method="post" enctype="multipart/form-data" id="generateToken"> <!-- Form für post method-->
              
-              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="generateToken" value="Erstellen">
+              <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="generateToken" value="Erstellen"><!--Input Form  -->
                 </div>
               
               </div>
         </div>
-        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-layout-spacer"></div><!--Abstand -->
     </div>
 
-<!--WICHTIG: WENN DU EIN BILD HINZUFÜGEN WILLST ÄNDERST DU DEN BACKGROUND ZU DEM BILD bei class="demo-card-wide mdl-card mdl-shadow--2dp" -->
-<ul class='mdl-list'>
+<!--An Christoph: WENN DU EIN BILD HINZUFÜGEN WILLST ÄNDERST DU DEN BACKGROUND ZU DEM BILD bei class="demo-card-wide mdl-card mdl-shadow--2dp" -->
+<ul class='mdl-list'><!--Sortierungstabelle Material Design Lite -->
+  
 <!--EINE CARD GEHT HIER LOS -->
 
-<li class="mdl-list__item" style="    float: left;">
+<li class="mdl-list__item" style="    float: left;"><!-- Ein List Item-->
       
 
 <?php
@@ -152,13 +149,13 @@ if(!empty($_GET['token'])){
                     
 
      
-                    <li class="mdl-list__item" style="    float: left;">
-      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                    <li class="mdl-list__item" style="    float: left;"><!--Orientierung nach links  -->
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp"> <!--Schatten -->
 
-        <div class="mdl-card__title">
+        <div class="mdl-card__title"><!-- Titel-->
           <h2 class="mdl-card__title-text"> <?php echo $row['head']; ?></h2>
         </div>
-        <div class="mdl-card__supporting-text">
+        <div class="mdl-card__supporting-text"><!--Beschreibung des Berufes -->
         <?php echo $row['besch']; ?>
         </div>
         <div class="mdl-card__actions mdl-card--border" >
@@ -169,9 +166,9 @@ if(!empty($_GET['token'])){
           <a>Token: <?php echo $row['token']; ?></a>
           <a href="tokenlogin.php?token=<?php echo $row['token']; ?>" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Bearbeiten
-              </a>
+              </a><!--Button MDL -->
               </div>
-              <div class="mdl-cell mdl-cell--3-col">
+              <div class="mdl-cell mdl-cell--3-col"> <!-- Löschen Button-->
               <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
               <input type="hidden" name="token" value="<?php echo $row['token']; ?>">
               <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="deleteBeruf" value="Löschen">
@@ -186,18 +183,6 @@ if(!empty($_GET['token'])){
 
       <?php }
                     }?>
-
-
-   
-<!--EINE CARD HÖRT HIER AUF-->
-
-
-
-
-
-
-
-
 
 </ul>
       </main>
