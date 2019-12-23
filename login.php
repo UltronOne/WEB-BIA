@@ -91,27 +91,29 @@ if($_SESSION['username']=="admin"){
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  
   <style>
+	  
     body {
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
+      display: flex;     /*Ausrichten aller ELemente*/
+      min-height: 100vh; 
+      flex-direction: column; /*Horizontales Ausrichten*/
     }
 
     main {
-      flex: 1 0 auto;
+      flex: 1 0 auto; /*Anpassen der Verteilung*/
     }
-
+/*Set background color*/
     body {
       background: #fff;
     }
-
+	  
+/*Wenn input field angesteuert/ angeclickt wird, schalte Farbe --> Gekoppelt mit Label */
     .input-field input[type=date]:focus + label,
     .input-field input[type=text]:focus + label,
     .input-field input[type=email]:focus + label,
     .input-field input[type=password]:focus + label {
       color: #e91e63;
     }
-
+/*Wenn input field angesteuert/ angeclickt wird, schalte Farbe*/
     .input-field input[type=date]:focus,
     .input-field input[type=text]:focus,
     .input-field input[type=email]:focus,
@@ -120,9 +122,7 @@ if($_SESSION['username']=="admin"){
       box-shadow: none;
     }
       
-      /* Button */
-
-	
+      /*Stylized Button */
 	.button {
 		
 		border-radius: 4px;
@@ -141,7 +141,7 @@ if($_SESSION['username']=="admin"){
 		font-size: 0.725em;
         width: 30em;
 	}
-
+      /*Stylized Button */
 
 	
 	.button {
@@ -151,11 +151,13 @@ if($_SESSION['username']=="admin"){
 	}
 
 		
-		
+		      /*Wenn drübergehalten wird schalte um auf weiches Rot  */
+
 		.button:hover {
 			color: #EF6480 !important;
 			box-shadow: inset 0 0 0 2px #EF6480;
 		}
+		      /*Sonst Schalte auf Grau  */
 
 		.button.icon:before {
 			color: #999999;
@@ -167,8 +169,8 @@ if($_SESSION['username']=="admin"){
 </head>
 
 <body>
-<!-- Navigationsbar -->
-    
+	
+<!-- Navigationsbar beschrieben in index.html-->
   <header>
     <nav class="nav-wrapper transparent" >
       <div class="container" >
@@ -188,41 +190,43 @@ if($_SESSION['username']=="admin"){
     
     
   <div class="section"></div>
-  <main>
-    <center>
-      <img class="responsive-img" style="width: 250px;align-content: center" src="img/rabe.png" />
+  <main> <!--  Main Content -->
+    <center> <!-- Zentrieren  -->
+      <img class="responsive-img" style="width: 250px;align-content: center" src="img/rabe.png" /><!--  bild -->
       <div class="section"></div>
 
-      <h5 class="text" style="color: #444444">Bitte loggen sie sich ein</h5>
+      <h5 class="text" style="color: #444444">Bitte loggen sie sich ein</h5><!-- Überschrift  -->
       <div class="section"></div>
 
-      <div class="container">
+      <div class="container"> <!-- Farbe geben um abzuheben  -->
         <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
 
-        <form class="col s12" method="post">
-            <div class='row'>
-              <div class='col s12'>
+        <form class="col s12" method="post"><!-- Wrappen des Ganzen in eine Form -->
+            <div class='row'><!--  Sortierungtabelle -->
+              <div class='col s12'><!--Ganze Seite   -->
               </div>
             </div>
-
+		
+<!--  Sortierungstabelle -->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s12'><!-- Ganze Siete  -->
               <input class='validate' type='text' name='username' id='text' />
                 <label for='text'>Username</label>
               </div>
             </div>
-
+		
+<!--  Sortierungsabelle -->
             <div class='row'>
-              <div class='input-field col s12'>
+              <div class='input-field col s12'> <!-- Inputfield  -->
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Passwort</label>
               </div>
-              <label style='float: right;'>
-								<a class='pink-text' ><b>Passwort wurde per Email verschickt</b></a>
+              <label style='float: right;'> <!-- Rechtssortieren  -->
+								<a class='pink-text' ><b>Passwort wurde per Email verschickt</b></a><!--Notiz   -->
 							</label>
             </div>
             <br />
-            <center>
+            <center><!--Zentrieren   -->
               <div class='row'>
                   <div class="col s12">
                 <button type='submit' name='btn_login' class='button' ">Login</button>
@@ -238,7 +242,7 @@ if($_SESSION['username']=="admin"){
   </main>
     </header>
 
-<!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript Materialize CSS für dei Navigationsleiste -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
