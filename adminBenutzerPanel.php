@@ -27,7 +27,6 @@ if($_SESSION['username']!="admin"){
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Admin Panel</title>
 
@@ -44,64 +43,63 @@ if($_SESSION['username']!="admin"){
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="img/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
 
+    <!-- Alle relevante ressourcen Schrift Symbole etc  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
     <link rel="stylesheet" href="main_adminpanel.css">
     <style>
- 
     </style>
   </head>
+  
+  
   <body>
+    <!-- Wir benutzen hierfür Material Design Lite  -->
+    <!--  Material Design Lite Header für Benutzerlisten -->
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Administratorkonsole-Benutzerlisten</span>
-          <div class="mdl-layout-spacer"></div>
-         
-         
+          <div class="mdl-layout-spacer"></div> 
         </div>
       </header>
+      
+      
+      <!-- Material Design Lite Layout Drawer- Avatar Admin Section  -->
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
           <img src="img/user.jpg" class="demo-avatar" style="margin-bottom: 1em">
           <div class="demo-avatar-dropdown">
             <span>Hallo Admin</span>
-            
         </header>
+          
+          
+          <!-- Navigationsleiste  -->
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
         <a class="mdl-navigation__link" href="adminPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
           <a class="mdl-navigation__link" href="adminBerufePanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Benutzer</a>
           <a class="mdl-navigation__link" href="adminBenutzerPanel.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Benutzerlisten</a>
-         
           <div class="mdl-layout-spacer"></div>
           <a class="mdl-navigation__link" href="logout.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">power_settings_new</i><span >Logout</span></a>
         </nav>
       </div>
 
-    <!--Tabbellen-->
+        
+    <!--Einreihen durch Material Design Tabbellen-->
     <div class="mdl-grid ">
-            
-            <div class="mdl-cell mdl-cell--6-col">
-
-            
-                <div class="card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-cell mdl-cell--6-col"><!--Einteilung in Hälfte  -->
+                <div class="card-wide mdl-card mdl-shadow--2dp"> <!-- Informationskarte MaterialdesignLite   -->
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzer hinzufügen</h2>
                     </div>
                     <div class="mdl-card__supporting-text">File auswählen</div>
                     
                     <div class="mdl-card__actions mdl-card--border">
-                      <form action="importData.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" />
+                      <form action="importData.php" method="post" enctype="multipart/form-data"> <!-- Einrappen in Form class für POST method  -->
+            <input type="file" name="file" /><!-- Input class HTML  -->
             <input type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" name="importSubmit" value="IMPORT">
         </form>            
                     </div>
@@ -111,9 +109,9 @@ if($_SESSION['username']!="admin"){
 
             
 
-
-            <div class="mdl-cell mdl-cell--6-col">
-                <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+<!--  Fortschritt und Download der tabelle -->
+            <div class="mdl-cell mdl-cell--6-col"><!--  Einteilung in Hälfte -->
+                <div class="demo-card-wide mdl-card mdl-shadow--2dp">  <!-- Informationskarte MaterialdesignLite   -->
                     <div class="mdl-card__title">
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzerliste herunterladen</h2>
                     </div>
@@ -126,22 +124,20 @@ if($_SESSION['username']!="admin"){
                     <div class="mdl-card__actions mdl-card--border">
                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                         Download
-                      </a>
-                    </div>
-                  
-                  </div>
-            </div>
+                      </a></div></div></div>
+              
             <div class="mdl-layout-spacer"></div>
         </div>
         <div class="mdl-grid">
                 <div class="mdl-layout-spacer"></div>
-    
+          
+          
+          <!--  Tabelle von MaterialDesign Lite -->
                 <div class="mdl-cell mdl-cell--12-col">
-    
         <table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp" style="max-width: initial; text-align: left">
                 <thead>
                   <tr>
-                    <th class="mdl-data-table__cell--non-numeric">Name</th>
+                    <th class="mdl-data-table__cell--non-numeric">Name</th><!-- Einteilung in einzelne Spalten  -->
                     <th>Passwort</th>
                     <th>Wahl 1</th>
                     <th>Wahl 2</th>
