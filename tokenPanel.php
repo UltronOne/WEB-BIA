@@ -29,7 +29,8 @@ $row = mysqli_fetch_assoc($query);
 
 ?>
 <html>
-
+  
+  <!-- Import aller Libraries -->
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
@@ -56,20 +57,19 @@ $row = mysqli_fetch_assoc($query);
     <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  
+    <!-- Kleine Verschiebung -->
   <style>
-   
    #id1 {
   margin-left : 30px;
   margin-right: 30px;
 }
-
-
   </style>
 </head>
 
 <body>
 
   <header>
+      <!-- Navbar -->
     <nav class="nav-wrapper transparent" >
         <div class="container" >
           <a href="#" class="brand-logo" style="color: #444444">Token Login</a>
@@ -123,29 +123,30 @@ if($_SESSION['username']=="admin"){
     
  
     </header>
-<!-- Gib bei data-length="" die maximale Länge an-->
 
+<!-- Notiz an Christoph: Gib bei data-length="" die maximale Länge an-->
 <div id="id1">
+    <!-- Formular -->
 <form action="importData.php" method="post" enctype="multipart/form-data" id="importFrm">
     <div class="col s12">
-      <div class="card blue-grey darken-1">
+      <div class="card blue-grey darken-1">  <!-- Import from materialize -->
         <div class="card-content white-text">
           <span class="card-title">Beruf hinzufügen</span>
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s6">
+          <div class="row">  <!-- Ausrichtungstabelle -->
+            <form class="col s12">  <!-- Gesamte Weite -->
+              <div class="row">  <!-- Ausrichtungstabelle -->
+                <div class="input-field col s12"> <!-- Gesamte Weite -->
                   <input id="input_text" type="text" name="textHead" value="<?php echo $head;?>" data-length="25">
                   <label for="input_text">Überschrift</label>
                 </div>
               </div>
-              <div class="row">
-                <div class="input-field col s12">
+              <div class="row"> <!-- Ausrichtungstabelle -->
+                <div class="input-field col s12"><!-- Gesamte Weite -->
                 <textarea id="textarea2" class="materialize-textarea" name="textBeschreibung"   data-length="500"><?php echo $besch;?></textarea>
-            <label for="textarea2">Beschreibung</label>
+            <label for="textarea2">Beschreibung</label><!-- Beshreibung -->
                 </div>
               </div>
-              <input type="submit" class="btn btn-primary" name="updateBeruf" value="Hinzufügen">
+              <input type="submit" class="btn btn-primary" name="updateBeruf" value="Hinzufügen"><!-- Button aus materializecss -->
             </form>
           </div>
         </div>
@@ -153,7 +154,7 @@ if($_SESSION['username']=="admin"){
   </form>
   </div>
 
-<!-- Compiled and minified JavaScript -->
+<!-- Compiled and minified JavaScript for materialize css -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
