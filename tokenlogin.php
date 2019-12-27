@@ -55,11 +55,11 @@ if (isset($_SESSION['token'])){
    
   }else{
   
-  
 
 ?>
 
 <html>
+      <!--  MODIFIZIERTE login.php Seite nur eine Zeile gestrichen -->
 
 <head>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -190,7 +190,8 @@ if (isset($_SESSION['token'])){
   <main>
     <center>
       <div class="section"></div>
-
+	    
+      <!--  Überschrift -->
       <p class="flow-text" style="color: #444444,">Bitte loggen sie sich mit <br>ihrem Berufstoken ein</p>
       <div class="section"></div>
 
