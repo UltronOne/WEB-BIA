@@ -1,4 +1,5 @@
- h1{
+ /* Hauptseite CSS Nächste zeilen sind einfach nur Anpassungen an die Schrift und Abstände */ 
+h1{
           margin-top: 200px;
           font-size: 2em;
           font-weight: 400;
@@ -34,6 +35,7 @@ p2{
 		color: #f8f8ff;
 	}
 
+/* Unnötiger Code der vielleicht noch gebraucht wird, sorry
 .box{
     width: 1600px;
     margin-left: auto;
@@ -43,8 +45,9 @@ p2{
     font-weight: 300; 
     letter-spacing: 0.0875rem;
     }
+  */
 
-
+    /* Stylized Button*/
 .button{
         width: 100%;
         text-align: center;
@@ -53,21 +56,19 @@ p2{
 		text-transform: uppercase;
 		letter-spacing: 0.325em;
 		font-size: 0.725em;
-        
 }
+    /* Stylized Button*/
 	.button {
 		box-shadow: 0 0 0 2px #666666;
-        padding: 0 2em 0 2.375em;
-        
-        
+                padding: 0 2em 0 2.375em;
 		color: #444444 !important;
 	}
-
+/* Billige Hoveranimation*/
 		.button:hover {
 			color: #EF6480 !important;
 			box-shadow: inset 0 0 0 2px #EF6480;
 		}
-
+/*Zurücksetzen */
 		.button.icon:before {
 			color: #999999;
 		}
@@ -76,14 +77,14 @@ p2{
 
 
 
-
+    /* Setze Bild Hintergrund*/
     header{
       background: url(img/banner.jpg);
       background-size: cover;
       background-position: center;
-
       min-height: 1000px;
-
+	    
+    /* Anpassung des Headers bei kleinen Geräten*/
  @media screen and (max-width: 670px){
       header{
         min-height: 500px;
