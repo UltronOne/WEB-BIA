@@ -1,8 +1,10 @@
 <html lang="en">
 <head>
+   <!--Standard HTML -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
   <!-- font awesome -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -16,9 +18,9 @@
     
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     
-  <!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS / Import Materialize CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <title>Berufsinformationsabend</title>
+  <title>Berufsinformationsabend</title> <!--Sitetitle -->
     <link rel="stylesheet" href="main_index.css" />
     
     <!--Let browser know website is optimized for mobile-->
@@ -27,18 +29,20 @@
 </head>
     
 <body>
-
+<!-- FÜr diese Seiten verwende ich Materialize CSS-->
   <!-- Navigationsbar -->
-    
   <header>
-    <nav class="nav-wrapper transparent">
-      <div class="container">
-
+    <nav class="nav-wrapper transparent"> <!--Navigationsleiste erstellt im Header -->
+	    
+      <div class="container"> <!-- Gruppierung in DIV-->
+	      
+	      <!-- Mobile Menu Aktivierungsbutton-->
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons">menu</i>    
-        </a>
-        <ul class="right hide-on-med-and-down">
-
+        </a>    
+	      
+	      <!--Desktop und Mobile View-->
+        <ul class="right hide-on-med-and-down">	
           <li><a href="userBerufePanel.php"><i class="material-icons left">person</i>Berufe</a></li>
           <li><a href="login.php"><i class="material-icons left">vpn_key</i>Login</a></li>
         </ul>
@@ -49,30 +53,28 @@
         <ul class="sidenav grey lighten-2" id="mobile-menu">
           <li><a href="#userBerufePanel.php">Berufe</a></li>
           <li><a href="#login.php">Login</a></li>
-
         </ul>
       </div>
+	    
     </nav>
       
+	  <!-- Überschrift-->
        <div class="text"style=" font-size:200%;text-align: center;">
           <h1 id="berufsheader">Berufsinformationsabend 2019</h1>
+	       <!-- Abtrennung-->
            <hr style="width: 1200px">
+	       <!--Unterüberschrift -->
 					<p class="flow-text">Datum hier einfügen</p>
-           
+           <!-- Pfeil nach unten-->
 <a class="fa fa-arrow-circle-down" style="color: white;font-size: 50px;margin-bottom: 100px" id="arrowscroll" href="#info"></a>
-           
-           
         </div>
-      
-      <!-- Pfeil 
-      
-      <button class=""><a href="#box"class='far fa-arrow-alt-circle-down' style='font-size:48px;color:black;text-align: center; ';></a></button>-->
-
   </header>
-    <div class="row">
-<div class="col s12">
-    				        
-<div class="center-align" style="font-size:400%;margin-top:50">
+	
+	
+    <div class="row"><!--Seitensortierung Tabelle -->
+<div class="col s12"><!-- Ganze Seite-->
+    		<!--Absatz mit überschrift -->		        
+<div class="center-align" style="font-size:400%;margin-top:50" id="info">
 						&#9432;
                                 </div>
 
@@ -87,17 +89,19 @@
     </div>
 
    
-    <div class="row">
+    <div class="row"><!--Seitensortierung -->
         
-        <div class="col s6">
-            
+        <div class="col s6"> <!--Hälfte des Screens -->
+		
+            <!-- Stylized Button -->
               <a class="waves-effect waves-light btn-small" href="login.php"style="margin-top: 2em; width:100%;background-color: white;color: black;  border-radius: 25px;"><i class="material-icons left">vpn_key</i>Login</a>
                             
             
         </div>
         
-        <div class="col s6">
-            
+        <div class="col s6"><!-- Andere Hälfte des Screens-->
+		
+            <!-- Stylized Button -->
           <a class="waves-effect waves-light btn-small" href="userBerufePanel.php" style="margin-top: 2em;width:100%;background-color: white;color: black; border-radius: 25px;"><i class="material-icons left">person</i>Berufe</a>
                                                                                 
     </div>
@@ -106,12 +110,12 @@
     </div>                                                                    
 
 
-  <!-- Compiled and msinified JavaScript -->
+  <!-- Compiled and msinified JavaScript für CSS Materialize -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
       
-    $(document).ready(function(){
+    $(document).ready(function(){      // Funktionen für Navigationsbar
       $('.sidenav').sidenav();
       $('.materialboxed').materialbox();
       $('.parallax').parallax();
@@ -120,7 +124,7 @@
         disableWeekends: true,
         yearRange: 1
       });
-      $('.tooltipped').tooltip();
+      $('.tooltipped').tooltip();            //Aufrufen der Nötigen Bibliiotheken
       $('.scrollspy').scrollSpy();
     });
 
