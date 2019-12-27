@@ -7,6 +7,34 @@ session_start();
 
 include 'dbConfig.php';
 
+$query = $db->query("SELECT * FROM benutzer ORDER BY id ASC");
+
+$numberGes =0;
+$number =0;
+
+if($query->num_rows > 0){
+   
+    while($row = $query->fetch_assoc()){
+      
+      if(isset($row['id'])){
+        ++$numberGes;
+        
+      }
+     
+
+      if(isset($row['w2'])){
+        if(isset($row['w1'])){
+        ++$number;
+          
+      }
+    }
+      
+    }
+    
+}
+  
+$percentage = $number/$numberGes;
+
 
 
 if(!isset($_SESSION['username'])) {
@@ -116,13 +144,25 @@ if($_SESSION['username']!="admin"){
                       <h2 class="mdl-card__title-text" style="color: #444444">Benutzerliste herunterladen</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                            Es haben XXX User die Wahl abgeschlossen
+                            Es haben <?php echo $number ?> von <?php echo $numberGes ?>  Nutzern die Wahl abgeschlossen
                     </div>
                     <div class="mdl-grid">
 
-                    <div id="p1" class="mdl-progress mdl-js-progress" style="width: 150%"></div>
+                  
+
+                    <div id="demo" class="mdl-progress mdl-js-progress" style="width: 200%"></div>
+  
+<script>
+  document.querySelector('#demo').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(<?php echo $percentage*100-60 ?>);
+  });
+</script>
+
+                
+
+
                     <div class="mdl-card__actions mdl-card--border">
-                      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                      <a href="exportData.php"class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                         Download
                       </a></div></div></div>
               
