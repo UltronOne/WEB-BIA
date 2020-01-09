@@ -221,9 +221,7 @@ if($_SESSION['username']=="admin"){
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Passwort</label>
               </div>
-              <label style='float: right;'> <!-- Rechtssortieren  -->
-								<a class='pink-text' ><b>Passwort wurde per Email verschickt</b></a><!--Notiz   -->
-							</label>
+            
             </div>
             <br />
             <center><!--Zentrieren   -->
