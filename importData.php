@@ -3,6 +3,7 @@ session_start();
 
 include 'dbConfig.php';
 
+//hochladen des cvs Files
 if(isset($_POST['importSubmit'])){
   
     $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
@@ -57,6 +58,7 @@ if(isset($_POST['generateToken'])){
 
 }
 
+//löscht den Beruf mit $token 
 if(isset($_POST['deleteBeruf'])){
     
     $token = $_POST["token"];
@@ -69,7 +71,7 @@ if(isset($_POST['deleteBeruf'])){
 
 }
 
-
+//update des Berufes in der Datenbank
 if(isset($_POST['updateBeruf'])){
     
                 $txtHead = $_POST["textHead"];
@@ -83,6 +85,7 @@ if(isset($_POST['updateBeruf'])){
     
 }
 
+//speichert den Berufswunsch des Schülers in der Datenbank
 if(isset($_POST['saveBeruf'])){
    
         $name = $_SESSION['username'];
